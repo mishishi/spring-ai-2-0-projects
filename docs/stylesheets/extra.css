@@ -715,8 +715,12 @@ body.md-home::after {
 .toc-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 2rem;
   margin: 3rem 0;
+}
+
+.toc-phase {
+  /* 每个 phase 一个 grid item */
 }
 
 .toc-grid h3 {
@@ -768,7 +772,9 @@ body.md-home::after {
 }
 
 @media (min-width: 768px) {
-  .toc-grid ul { grid-template-columns: 1fr 1fr; }
+  /* 大屏:Phase 1 / Phase 2 左右两列平分 */
+  .toc-grid { grid-template-columns: 1fr 1fr; }
+  .toc-grid ul { grid-template-columns: 1fr; }
 }
 
 .toc-grid li {
