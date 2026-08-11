@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: 04-function-calling
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:fake-key-for-tests}
+      chat:
+        options:
+          model: gpt-4o-mini
+          temperature: 0.0  # 0 温度,function call 更稳定
+          max-tokens: 500
