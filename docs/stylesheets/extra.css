@@ -1677,12 +1677,11 @@ body.md-home .md-content__inner > p:first-of-type {
    4 阶段路线图 — 杂志封面卡片
    ============================================ */
 .phase-journey {
-  display: grid;
-  grid-template-columns: 1fr 40px 1fr 40px 1fr 40px 1fr;
+  display: flex;
+  align-items: center;  /* arrow column 不再 stretch,垂直居中 */
   margin: 2.5rem auto 3rem;
   padding: 2rem 0 0;
   border-top: 2px solid var(--ink);
-  align-items: stretch;
   width: 100%;
   max-width: 1080px;
   box-sizing: border-box;
@@ -1867,9 +1866,9 @@ body.md-home .md-content__inner > p:first-of-type {
   color: var(--accent);
 }
 
-/* 卡片间的箭头 — flex: 0 不缩 */
+/* 卡片间的箭头 — flex: 0 不缩,column 加宽让 arrow 视觉独立 */
 .phase-journey__arrow {
-  flex: 0 0 40px;
+  flex: 0 0 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1878,6 +1877,7 @@ body.md-home .md-content__inner > p:first-of-type {
   font-weight: 700;
   color: var(--accent);
   position: relative;
+  align-self: center;  /* 父级 align-items: center 进一步保证 */
 }
 
 .phase-journey__arrow span {
