@@ -1678,18 +1678,14 @@ body.md-home .md-content__inner > p:first-of-type {
    ============================================ */
 .phase-journey {
   display: grid;
-  /* 4 cards + 3 arrows, fixed width 出 article */
   grid-template-columns: 1fr 40px 1fr 40px 1fr 40px 1fr;
   margin: 2.5rem auto 3rem;
   padding: 2rem 0 0;
   border-top: 2px solid var(--ink);
   align-items: stretch;
-  width: 1080px;
-  max-width: calc(100vw - 4rem);
+  width: 100%;
+  max-width: 1080px;
   box-sizing: border-box;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .phase-journey__card {
