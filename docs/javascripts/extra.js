@@ -123,10 +123,10 @@
   // 标题
   const title = document.createElement('h2');
   title.className = 'nav-drawer__title';
-  title.textContent = '目录 · 12 章';
+  title.textContent = '目录 · 23 module';
   drawer.appendChild(title);
 
-  // 12 章直接列出(从 mkdocs nav 提取 chapter 级别链接,跳过 "Phase X 总览" 标签)
+  // 23 module 全部列出(从 mkdocs nav 提取 chapter 级别链接,跳过 "Phase X 总览" 标签)
   const primaryNav = document.querySelector('.md-nav.md-nav--primary');
   if (primaryNav) {
     const allChapterLinks = primaryNav.querySelectorAll(
@@ -134,12 +134,12 @@
     );
     allChapterLinks.forEach(subLink => {
       const subText = (subLink.textContent || '').trim();
-      // 只显示 01-12 章节,跳过 "Phase 1 总览" / "Phase 2 总览"
-      if (!/^0?\d+\s+/.test(subText)) return;
+      // 只显示 01-18 chapter + P1-P5 项目,跳过 "Phase X 总览"
+      if (!/^(0?\d+|P[1-5])\s+/.test(subText)) return;
 
       const a = document.createElement('a');
       a.href = subLink.getAttribute('href') || '#';
-      const match = subText.match(/^(\d+)\s+(.+)$/);
+      const match = subText.match(/^(0?\d+|P[1-5])\s+(.+)$/);
       if (match) {
         const num = document.createElement('span');
         num.className = 'nav-drawer__num';
