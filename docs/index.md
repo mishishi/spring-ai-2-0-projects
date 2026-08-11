@@ -80,13 +80,14 @@ Java 工程师的 Spring AI 2.0 重做版
 
 ## 12 章 · 全目录
 
+> **先看[第 0 章 · 导读](00-reading-guide.md)** — 读者画像 / 跟 v1 区别 / 20 周节奏
+
 <div class="toc-grid">
 
 ### <span class="toc-phase-label toc-phase-1">PHASE 1</span> [基础 (Spring AI 2.0 核心)](overviews/phase-1.md)
 
 6 章上手 ChatClient 全家桶 — 同步 / 流式 / Structured / Function Calling
 
-- **[第 0 章 · 导读](00-reading-guide.md)** — 读者画像 / 跟 v1 区别 / 20 周节奏
 - **[01 Hello World](01-hello-world.md)** — 第一个 ChatClient, 5 行代码
 - **[02 ChatClient API](02-chatclient-api.md)** — Builder / Prompt / Advisor 三件套
 - **[03 Prompt + Advisor](03-prompt-advisor.md)** — PromptTemplate + SimpleLoggerAdvisor
