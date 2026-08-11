@@ -87,7 +87,7 @@
   content.appendChild(nav);
 })();
 
-// 抽屉式目录 — 兼容 v1 风格(隐藏真 sidebar,但提供 toggle 入口)
+// 抽屉式目录 — 兼容 v1 风格(隐藏真 sidebar,左下角按钮唤起,12 章直接列出)
 (function() {
   if (!document.body.classList.contains('md-home')) return;
   if (document.querySelector('.nav-drawer')) return;
@@ -95,8 +95,8 @@
   // Trigger 按钮
   const trigger = document.createElement('button');
   trigger.className = 'nav-drawer-trigger';
-  trigger.textContent = '目录';
   trigger.setAttribute('aria-label', '打开目录');
+  trigger.setAttribute('title', '目录');
   document.body.appendChild(trigger);
 
   // Overlay
@@ -119,63 +119,33 @@
   // 标题
   const title = document.createElement('h2');
   title.className = 'nav-drawer__title';
-  title.textContent = 'Spring AI 2.0 项目实战';
+  title.textContent = '目录 · 12 章';
   drawer.appendChild(title);
 
-  const sub = document.createElement('span');
-  sub.className = 'nav-drawer__sub';
-  sub.textContent = '12 章 · 5 个项目 · 20 周';
-  drawer.appendChild(sub);
-
-  // 从 mkdocs 默认 sidebar 复制 nav 结构
+  // 12 章直接列出(从 mkdocs nav 提取 chapter 级别链接,跳过 "Phase X 总览" 标签)
   const primaryNav = document.querySelector('.md-nav.md-nav--primary');
   if (primaryNav) {
-    // 复制所有顶级链接
-    const topLevel = primaryNav.querySelectorAll(':scope > .md-nav__list > .md-nav__item');
-    topLevel.forEach(item => {
-      const link = item.querySelector(':scope > a.md-nav__link, :scope > .md-nav__link');
-      if (link) {
-        const text = (link.textContent || '').trim();
-        // 顶级链接(Phase 标题)可能没 href(label only),不显示
-        if (link.getAttribute('href') || text.includes('Phase')) {
-          // 跳过 phase 标题本身,只显示其下的 chapter
-          if (!text.includes('Phase')) {
-            const a = document.createElement('a');
-            a.href = link.getAttribute('href') || '#';
-            a.textContent = text;
-            a.style.fontWeight = '700';
-            drawer.appendChild(a);
-          } else {
-            // Phase 分组标题
-            const sub = document.createElement('span');
-            sub.className = 'nav-drawer__sub';
-            sub.textContent = text;
-            drawer.appendChild(sub);
-          }
-        }
+    const allChapterLinks = primaryNav.querySelectorAll(
+      ':scope > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item > a.md-nav__link'
+    );
+    allChapterLinks.forEach(subLink => {
+      const subText = (subLink.textContent || '').trim();
+      // 只显示 01-12 章节,跳过 "Phase 1 总览" / "Phase 2 总览"
+      if (!/^0?\d+\s+/.test(subText)) return;
 
-        // 只加 chapter 级别链接(顶级 .md-nav__list > .md-nav__item > a.md-nav__link),不加 H2
-        const subItems = item.querySelectorAll(':scope > .md-nav > .md-nav__list > .md-nav__item > a.md-nav__link');
-        subItems.forEach(subLink => {
-          const a2 = document.createElement('a');
-          a2.href = subLink.getAttribute('href') || '#';
-          const subText = (subLink.textContent || '').trim();
-          // 拆分数字和标题,如 "01 Hello World" → strong "01" + "Hello World"
-          const match = subText.match(/^(\d+)\s+(.+)$/);
-          if (match) {
-            const num = document.createElement('span');
-            num.className = 'nav-drawer__num';
-            num.textContent = match[1];
-            a2.appendChild(num);
-            a2.appendChild(document.createTextNode(' ' + match[2]));
-          } else {
-            a2.textContent = subText;
-          }
-          a2.style.paddingLeft = '1.2rem';
-          a2.style.fontSize = '0.88rem';
-          drawer.appendChild(a2);
-        });
+      const a = document.createElement('a');
+      a.href = subLink.getAttribute('href') || '#';
+      const match = subText.match(/^(\d+)\s+(.+)$/);
+      if (match) {
+        const num = document.createElement('span');
+        num.className = 'nav-drawer__num';
+        num.textContent = match[1];
+        a.appendChild(num);
+        a.appendChild(document.createTextNode(' ' + match[2]));
+      } else {
+        a.textContent = subText;
       }
+      drawer.appendChild(a);
     });
   }
   document.body.appendChild(drawer);
