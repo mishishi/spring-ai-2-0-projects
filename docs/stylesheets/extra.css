@@ -1683,11 +1683,12 @@ body.md-home .md-content__inner > p:first-of-type {
   padding: 2rem 0 0;
   border-top: 2px solid var(--ink);
   align-items: stretch;
-  /* 出 viewport 血:撑满 1440 - 4rem */
+  /* 撑满 viewport(出血),以屏幕中心为锚点 */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   width: calc(100vw - 4rem);
   max-width: 1280px;
-  margin-left: calc(50% - 50vw + 2rem);
-  margin-right: calc(50% - 50vw + 2rem);
   box-sizing: border-box;
 }
 
