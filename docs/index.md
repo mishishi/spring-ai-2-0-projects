@@ -89,11 +89,11 @@ Java 工程师的 Spring AI 2.0 重做版
 
 <ul class="phase-journey__highlights">
 
-<li>ChatClient API</li>
+<li>ChatClient</li>
 
 <li>Streaming</li>
 
-<li>Structured Output</li>
+<li>Structured</li>
 
 </ul>
 
@@ -121,7 +121,7 @@ Java 工程师的 Spring AI 2.0 重做版
 
 <li>pgvector</li>
 
-<li>Multi-Query</li>
+<li>MultiQuery</li>
 
 <li>Re-ranking</li>
 
@@ -149,11 +149,11 @@ Java 工程师的 Spring AI 2.0 重做版
 
 <ul class="phase-journey__highlights">
 
-<li>@Tool · MCP</li>
+<li>@Tool + MCP</li>
 
 <li>Multi-Agent</li>
 
-<li>Graph · Memory</li>
+<li>Graph</li>
 
 </ul>
 
@@ -179,9 +179,9 @@ Java 工程师的 Spring AI 2.0 重做版
 
 <ul class="phase-journey__highlights">
 
-<li>周报 · 文档 · 旅行</li>
+<li>周报 · 文档</li>
 
-<li>代码审查 · 综合</li>
+<li>审查 · 中心</li>
 
 </ul>
 
