@@ -16,6 +16,7 @@
     <modules>
         <!-- Phase 1: 基础筑基 -->
         <module>01-basics/01-hello-world</module>
+        <module>01-basics/02-chatclient-api</module>
         <!-- 后续 chapter 边做边加 -->
     </modules>
 

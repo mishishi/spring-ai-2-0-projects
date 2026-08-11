@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: 02-chatclient-api
+  ai:
+    openai:
+      # 默认 fake key 让 application.yml 解析不报错;实际跑要 export OPENAI_API_KEY
+      api-key: ${OPENAI_API_KEY:fake-key-for-tests}
+      chat:
+        options:
+          model: gpt-4o-mini
+          temperature: 0.7
+          max-tokens: 500
