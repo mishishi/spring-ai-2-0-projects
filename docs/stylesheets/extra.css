@@ -592,21 +592,12 @@ body.md-home-hero::after {
   background: var(--paper);
 }
 
-/* Article 页面顶部装饰条 (在 drawer trigger 旁) */
-body:not(.md-home-hero)::before {
-  content: "SPRING AI 2.0";
-  position: fixed;
-  top: 1.7rem;
-  left: 4.7rem;
-  z-index: 100;
-  font-family: var(--md-text-font);
-  font-weight: 800;
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-  pointer-events: none;
-  white-space: nowrap;
+/* Article 页面隐藏 ::before 装饰 (避免跟 breadcrumb 撞)
+   ::after 装饰 ⌘K 也隐藏 (改用 theme-toggle + 真实 ⌘K 触发) */
+body:not(.md-home-hero)::before,
+body:not(.md-home-hero)::after {
+  content: none !important;
+  display: none !important;
 }
 
 body.md-home .md-content__inner > h1:first-child {
