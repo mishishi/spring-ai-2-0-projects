@@ -45,13 +45,16 @@
   const primaryNav = document.querySelector('.md-nav.md-nav--primary');
   if (!primaryNav) return;
   const allLinks = Array.from(primaryNav.querySelectorAll('a.md-nav__link'));
-  const currentIndex = allLinks.findIndex(a => {
-    const href = a.getAttribute('href');
-    if (!href) return false;
-    // Vercel 部署后 href 是相对路径(如 `../16-multi-agent/`),不是 `/16-multi-agent/`
-    // 用 numStr 直接匹配,不管前缀
-    return href.includes(numStr + '-') || href.endsWith(numStr);
-  });
+  // 找当前 active link — mkdocs 给当前页加 md-nav__link--active
+  // 不用 href 匹配是因为 Vercel 部署后 href 是相对路径(甚至 "./"),不靠谱
+  let currentIndex = allLinks.findIndex(a => a.classList.contains('md-nav__link--active'));
+  // fallback: 找 text 匹配 numStr 的 link
+  if (currentIndex === -1) {
+    currentIndex = allLinks.findIndex(a => {
+      const t = (a.textContent || '').trim();
+      return t.startsWith(numStr + ' ') || t.startsWith(numStr + '·') || t === numStr;
+    });
+  }
   if (currentIndex === -1) return;
 
   const currentLink = allLinks[currentIndex];
