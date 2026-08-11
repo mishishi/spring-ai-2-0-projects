@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: 07-rag-overview
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:fake-key-for-tests}
+      chat:
+        options:
+          model: gpt-4o-mini
+          temperature: 0.2
+          max-tokens: 500
+      embedding:
+        options:
+          model: text-embedding-3-small  # OpenAI 嵌入模型
