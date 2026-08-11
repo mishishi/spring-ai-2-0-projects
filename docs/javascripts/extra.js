@@ -19,11 +19,11 @@
   if (document.body.classList.contains('md-home-hero')) return;
 
   const path = window.location.pathname;
-  // 扩展 regex: 支持 NN-xxx (01-18) 或 PP-xxx (P1-P5)
-  const match = path.match(/\/(\d{2}|P[1-5])-([^/]+)\//);
+  // 扩展 regex: 支持 NN-xxx (01-18) 或 project-N-xxx (P1-P5)
+  const match = path.match(/\/(?:(\d{2})|project-([1-5]))-([^/]+)\//);
   if (!match) return;
 
-  const numStr = match[1];
+  const numStr = match[1] || ('P' + match[2]);
   // Phase 划分: 1-6=phase 1, 7-12=phase 2, 13-18=phase 3, P1-P5=phase 4
   let phaseNum;
   if (numStr.startsWith('P')) {
