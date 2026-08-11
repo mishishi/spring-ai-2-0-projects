@@ -233,6 +233,14 @@
     allChapterLinks.forEach(subLink => {
       const subText = (subLink.textContent || '').trim();
       if (!/^(0?\d+|P[1-5])\s+/.test(subText)) return;
+      // 过滤首页 H2 锚点(用 href 包含 # 的)和非 chapter 页
+      const href = subLink.getAttribute('href') || '';
+      if (href.startsWith('#')) return;  // 锚点
+      if (href.includes('overviews')) return;  // 总览页
+      if (href.includes('00-reading')) return;  // 导读
+      if (href.includes('retrospectives')) return;  // 复盘
+      if (href.includes('decisions')) return;  // 决策记录
+      if (href.endsWith('index') || href.endsWith('index/')) return;  // 首页
       const match = subText.match(/^(0?\d+|P[1-5])\s+(.+)$/);
       const num = match[1];
       const title = match[2];
@@ -244,7 +252,7 @@
         else if (n <= 12) phase = 'Phase 2 · RAG';
         else phase = 'Phase 3 · Agent';
       }
-      phaseGroups[phase].push({ num, title, href: subLink.getAttribute('href') || '#' });
+      phaseGroups[phase].push({ num, title, href });
     });
   }
 
