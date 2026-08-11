@@ -1683,8 +1683,10 @@ body.md-home .md-content__inner > p:first-of-type {
   padding: 2rem 0 0;
   border-top: 2px solid var(--ink);
   align-items: stretch;
-  width: 100%;
-  max-width: 100%;
+  width: calc(100% + 80px);
+  margin-left: -40px;
+  margin-right: -40px;
+  max-width: none;
   box-sizing: border-box;
 }
 
