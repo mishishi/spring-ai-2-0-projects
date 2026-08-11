@@ -555,8 +555,9 @@ body.md-home .md-content__inner {
   padding: 0 2rem;
 }
 
-/* 全站装饰刊头 — 跟 v1 风格一致 */
-body.md-home::before {
+/* 全站装饰刊头 — 跟 v1 风格一致
+   只在真首页(md-home-hero)显示,article 页面靠 breadcrumb 导航 */
+body.md-home-hero::before {
   content: "SPRING AI 2.0  ·  20 WEEKS  ·  JAVA 工程师实战";
   position: fixed;
   top: 1.5rem;
@@ -572,7 +573,7 @@ body.md-home::before {
   white-space: nowrap;
 }
 
-body.md-home::after {
+body.md-home-hero::after {
   content: "⌘ K 搜索";
   position: fixed;
   top: 1.5rem;
@@ -589,6 +590,23 @@ body.md-home::after {
   border-radius: 2px;
   pointer-events: none;
   background: var(--paper);
+}
+
+/* Article 页面顶部装饰条 (在 drawer trigger 旁) */
+body:not(.md-home-hero)::before {
+  content: "SPRING AI 2.0";
+  position: fixed;
+  top: 1.7rem;
+  left: 4.7rem;
+  z-index: 100;
+  font-family: var(--md-text-font);
+  font-weight: 800;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  pointer-events: none;
+  white-space: nowrap;
 }
 
 body.md-home .md-content__inner > h1:first-child {
