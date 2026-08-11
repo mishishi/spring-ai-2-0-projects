@@ -1,7 +1,5 @@
 # 第 8 章 · pgvector
 
-> Phase 2 · RAG 实战
-> 🎯 把 SimpleVectorStore 换成真实 PostgreSQL pgvector,数据持久化
 
 ## 一句话总结
 

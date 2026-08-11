@@ -1,7 +1,5 @@
 # 第 7 章 · RAG Overview
 
-> Phase 2 · RAG 实战
-> 🎯 理解 RAG 4 步流程 + 跑通 in-memory RAG demo
 
 ## 一句话总结
 

@@ -1,7 +1,5 @@
 # 第 9 章 · Document Loaders
 
-> Phase 2 · RAG 实战
-> 🎯 加载真实文档 + 切块 + 存到 vector store
 
 ## 一句话总结
 

@@ -1,7 +1,5 @@
 # 第 3 章 · Prompt + Advisor
 
-> Phase 1 · 基础筑基
-> 🎯 掌握 PromptTemplate 参数化 + Advisor 拦截器模式
 
 ## 一句话总结
 

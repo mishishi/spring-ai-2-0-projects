@@ -1,7 +1,5 @@
 # 第 5 章 · Structured Output
 
-> Phase 1 · 基础筑基
-> 🎯 把 LLM 输出从 String 转成 Java POJO,强类型!
 
 ## 一句话总结
 

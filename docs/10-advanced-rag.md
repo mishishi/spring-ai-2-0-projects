@@ -1,6 +1,5 @@
 # 第 10 章 · Advanced RAG
 
-> 🎯 目标:Spring AI 2.0 组合式 RAG(Multi-Query / Hybrid / Re-rank)
 
 ## 你将学到
 

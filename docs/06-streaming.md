@@ -1,7 +1,5 @@
 # 第 6 章 · Streaming
 
-> Phase 1 · 基础筑基
-> 🎯 WebFlux + SSE 实现"打字机效果"
 
 ## 一句话总结
 

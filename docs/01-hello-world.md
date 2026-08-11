@@ -1,7 +1,5 @@
 # 第 1 章 · Hello World
 
-> Phase 1 · 基础筑基
-> 🎯 跑起来,看到 Spring AI 2.0 输出第一行
 
 ## 一句话总结
 

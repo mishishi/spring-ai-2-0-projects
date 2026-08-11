@@ -1,6 +1,5 @@
 # 第 11 章 · Re-ranking
 
-> 🎯 目标:用 `DocumentPostProcessor` 在 RAG 检索后重排序,提升 top-k 准确率
 
 ## 你将学到
 

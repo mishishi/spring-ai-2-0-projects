@@ -1,7 +1,5 @@
 # 第 4 章 · Function Calling
 
-> Phase 1 · 基础筑基
-> 🎯 让 LLM 调用你的 Java 方法
 
 ## 一句话总结
 

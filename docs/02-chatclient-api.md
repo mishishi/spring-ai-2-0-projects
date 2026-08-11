@@ -1,7 +1,5 @@
 # 第 2 章 · ChatClient API 深入
 
-> Phase 1 · 基础筑基
-> 🎯 掌握 ChatClient fluent API 的 4 个核心方法
 
 ## 一句话总结
 
