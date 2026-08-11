@@ -1,0 +1,113 @@
+site_name: Spring AI 2.0 项目实战
+site_description: 20 周 · 12 章 + 5 个完整项目 — Java 工程师的 Spring AI 2.0 重做版
+site_author: Jason
+
+# Theme — material, 通过 docs/stylesheets/extra.css override (跟 v1 30 天书风格一致)
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到浅色模式
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+
+# The Verge 杂志风(同 v1 30 天书)
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+
+# Nav — 2 phase, 12 chapter(v2 适配,根目录结构)
+nav:
+  - 首页: index.md
+  - 第 0 章 · 导读: 00-reading-guide.md
+  - Phase 1 · 基础 (Spring AI 2.0 核心):
+      - Phase 1 总览: overviews/phase-1.md
+      - "01": 01-hello-world.md
+      - "02": 02-chatclient-api.md
+      - "03": 03-prompt-advisor.md
+      - "04": 04-function-calling.md
+      - "05": 05-structured-output.md
+      - "06": 06-streaming.md
+  - Phase 2 · RAG 实战 (pgvector + 高级模式):
+      - Phase 2 总览: overviews/phase-2.md
+      - "07": 07-rag-overview.md
+      - "08": 08-pgvector.md
+      - "09": 09-document-loaders.md
+      - "10": 10-advanced-rag.md
+      - "11": 11-reranking.md
+      - "12": 12-rag-production.md
+  - 决策记录: decisions/2026-08-11-重做决策.md
+
+repo_name: spring-ai-2-0-projects
+repo_url: https://github.com/mishishi/spring-ai-2-0-projects
+edit_uri: edit/main/
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.caret
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+exclude_docs: |
+  target/
+  .venv/
+  .git/
+  01-basics/
+  02-rag/
+  03-agent/
+  04-projects/
+
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'

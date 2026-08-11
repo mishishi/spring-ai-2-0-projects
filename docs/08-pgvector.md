@@ -58,5 +58,5 @@ PgVectorStore.builder(jdbc, embeddingModel)
 
 ## 下一步
 
-- [第 9 章 · Document Loaders →](../02-rag/09-document-loaders/README.md)
+- [第 9 章 · Document Loaders →](09-document-loaders.md)
 - 真实 PDF/Word/Markdown 文档加载

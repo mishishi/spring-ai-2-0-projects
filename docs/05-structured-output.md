@@ -92,5 +92,5 @@ Review r = client.prompt()
 
 ## 下一步
 
-- [第 6 章 · Streaming →](../01-basics/06-streaming/README.md)
+- [第 6 章 · Streaming →](06-streaming.md)
 - WebFlux + SSE 实时推流到浏览器

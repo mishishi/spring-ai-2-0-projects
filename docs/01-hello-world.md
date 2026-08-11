@@ -131,5 +131,5 @@ mvn test
 
 ## 下一步
 
-- [第 2 章 · ChatClient API 深入 →](../01-basics/02-chatclient-api/README.md)
-- [Phase 1 总览 →](../overviews/phase-1.md)(后续补)
+- [第 2 章 · ChatClient API 深入 →](02-chatclient-api.md)
+- [Phase 1 总览 →](overviews/phase-1.md)(后续补)

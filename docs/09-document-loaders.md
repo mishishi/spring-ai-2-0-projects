@@ -46,5 +46,5 @@
 
 ## 下一步
 
-- [第 10 章 · Advanced RAG →](../02-rag/10-advanced-rag/README.md)
+- [第 10 章 · Advanced RAG →](10-advanced-rag.md)
 - Multi-Query 扩展 / Hybrid Search / RetrievalAugmentationAdvisor 组合

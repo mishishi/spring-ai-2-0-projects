@@ -140,7 +140,7 @@ VectorStore pgVectorStore(JdbcTemplate jdbc, EmbeddingModel model) {
 
 ## 下一步
 
-- [第 8 章 · pgvector →](../02-rag/08-pgvector/README.md)
+- [第 8 章 · pgvector →](08-pgvector.md)
 - 把 SimpleVectorStore 换成真实 PostgreSQL pgvector
 
 **chapter 8 需要你拍 1 个 P0 决策**:

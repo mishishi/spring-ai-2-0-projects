@@ -104,5 +104,5 @@ LLM 看到错误信息会自己修正(比如改成 `Math.abs(id)` 或重新问�
 
 ## 下一步
 
-- [第 5 章 · Structured Output →](../01-basics/05-structured-output/README.md)
+- [第 5 章 · Structured Output →](05-structured-output.md)
 - 把 LLM 的字符串输出转成强类型 Java 对象

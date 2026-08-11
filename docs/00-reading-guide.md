@@ -57,4 +57,4 @@ v1 已归档(2026-08-11),Vercel 项目已删除。本系列是全新开始。
 
 ## 下一步
 
-读完导读,进入 [Phase 1 · 01 Hello World →](../../01-basics/01-hello-world/README.md)
+读完导读,进入 [Phase 1 · 01 Hello World →](01-hello-world.md)

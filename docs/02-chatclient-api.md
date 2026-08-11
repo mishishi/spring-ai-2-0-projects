@@ -124,4 +124,4 @@ client.prompt().user("用 5 句话介绍 Spring AI").stream().content()
 
 ## 下一步
 
-- [第 3 章 · Prompt 与 Advisor →](../01-basics/03-prompt-advisor/README.md)
+- [第 3 章 · Prompt 与 Advisor →](03-prompt-advisor.md)

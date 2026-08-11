@@ -134,5 +134,5 @@ public class TimingAdvisor implements CallAdvisor {
 
 ## 下一步
 
-- [第 4 章 · Function Calling →](../01-basics/04-function-calling/README.md)
+- [第 4 章 · Function Calling →](04-function-calling.md)
 - 让 LLM 调你的 Java 方法
