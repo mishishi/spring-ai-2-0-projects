@@ -556,45 +556,10 @@ body.md-home .md-content__inner {
   padding: 0 2rem;
 }
 
-/* 全站装饰刊头 — 跟 v1 风格一致
-   只在真首页(md-home-hero)显示,article 页面靠 breadcrumb 导航 */
-body.md-home-hero::before {
-  content: "SPRING AI 2.0  ·  20 WEEKS  ·  JAVA 工程师实战";
-  position: fixed;
-  top: 1.5rem;
-  left: 4.7rem;
-  z-index: 100;
-  font-family: var(--md-text-font);
-  font-weight: 800;
-  font-size: 0.7rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-  pointer-events: none;
-  white-space: nowrap;
-}
+/* 装饰刊头已移除 — H1 已经有项目名,刊头是噪音
+   顶部固定按钮: ☰ 抽屉 + 🌙 主题切换(已由 .nav-drawer-trigger + .theme-toggle 实现) */
 
-body.md-home-hero::after {
-  content: "⌘ K 搜索";
-  position: fixed;
-  top: 1.5rem;
-  right: 2rem;
-  z-index: 100;
-  font-family: var(--md-text-font);
-  font-weight: 600;
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-  border: 1px solid var(--line);
-  padding: 0.3rem 0.7rem;
-  border-radius: 2px;
-  pointer-events: none;
-  background: var(--paper);
-}
-
-/* Article 页面隐藏 ::before 装饰 (避免跟 breadcrumb 撞)
-   ::after 装饰 ⌘K 也隐藏 (改用 theme-toggle + 真实 ⌘K 触发) */
+/* Article 页面隐藏 ::before/::after 装饰(如果未来再加) */
 body:not(.md-home-hero)::before,
 body:not(.md-home-hero)::after {
   content: none !important;
