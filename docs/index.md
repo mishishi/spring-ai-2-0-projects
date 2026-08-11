@@ -83,7 +83,7 @@ Java 工程师的 Spring AI 2.0 重做版
 
 <span class="phase-journey__name">基础</span>
 
-<span class="phase-journey__weeks">W1-4 · 6 章</span>
+<span class="phase-journey__weeks">6 章</span>
 
 </div>
 
@@ -113,7 +113,7 @@ Java 工程师的 Spring AI 2.0 重做版
 
 <span class="phase-journey__name">RAG</span>
 
-<span class="phase-journey__weeks">W5-10 · 6 章</span>
+<span class="phase-journey__weeks">6 章</span>
 
 </div>
 
@@ -143,7 +143,7 @@ Java 工程师的 Spring AI 2.0 重做版
 
 <span class="phase-journey__name">Agent</span>
 
-<span class="phase-journey__weeks">W11-16 · 6 章</span>
+<span class="phase-journey__weeks">6 章</span>
 
 </div>
 
@@ -173,7 +173,7 @@ Java 工程师的 Spring AI 2.0 重做版
 
 <span class="phase-journey__name">项目</span>
 
-<span class="phase-journey__weeks">W17-20 · 5 个</span>
+<span class="phase-journey__weeks">5 项目</span>
 
 </div>
 
