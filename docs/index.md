@@ -86,7 +86,7 @@ Java 工程师的 Spring AI 2.0 重做版
 
 <div class="toc-phase">
 
-### <span class="toc-phase-label toc-phase-1">PHASE 1</span> [基础 (Spring AI 2.0 核心)](overviews/phase-1.md)
+<h3><span class="toc-phase-label toc-phase-1">PHASE 1</span> <a href="overviews/phase-1.md">基础 (Spring AI 2.0 核心)</a></h3>
 
 6 章上手 ChatClient 全家桶 — 同步 / 流式 / Structured / Function Calling
 
@@ -101,7 +101,7 @@ Java 工程师的 Spring AI 2.0 重做版
 
 <div class="toc-phase">
 
-### <span class="toc-phase-label toc-phase-2">PHASE 2</span> [RAG 实战 (pgvector + 高级模式)](overviews/phase-2.md)
+<h3><span class="toc-phase-label toc-phase-2">PHASE 2</span> <a href="overviews/phase-2.md">RAG 实战 (pgvector + 高级模式)</a></h3>
 
 6 章完整 RAG pipeline — Load / Split / Embed / Store / Retrieve / Production
 
