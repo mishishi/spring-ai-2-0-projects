@@ -588,6 +588,42 @@ body.md-home .md-content__inner {
   pointer-events: none;
 }
 
+/* 全站装饰刊头 — 跟 v1 风格一致(所有页面 body.md-home 都有装饰) */
+body.md-home::before {
+  content: "SPRING AI 2.0  ·  20 WEEKS  ·  JAVA 工程师实战";
+  position: fixed;
+  top: 0.7rem;
+  left: 1.5rem;
+  z-index: 200;
+  font-family: var(--md-text-font);
+  font-weight: 800;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+body.md-home::after {
+  content: "⌘ K 搜索";
+  position: fixed;
+  top: 0.55rem;
+  right: 11.5rem;
+  z-index: 200;
+  font-family: var(--md-text-font);
+  font-weight: 600;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+  padding: 0.25rem 0.6rem;
+  border-radius: 2px;
+  pointer-events: none;
+  background: var(--paper);
+}
+
 body.md-home .md-content__inner > h1:first-child {
   font-family: var(--md-heading-font);
   font-weight: 900;
