@@ -83,37 +83,30 @@ Java 工程师的 Spring AI 2.0 重做版
 > **先看[第 0 章 · 导读](00-reading-guide.md)** — 读者画像 / 跟 v1 区别 / 20 周节奏
 
 <div class="toc-grid">
-
 <div class="toc-phase">
-
-<h3><span class="toc-phase-label toc-phase-1">PHASE 1</span> <a href="overviews/phase-1.md">基础 (Spring AI 2.0 核心)</a></h3>
-
-6 章上手 ChatClient 全家桶 — 同步 / 流式 / Structured / Function Calling
-
-- **[01 Hello World](01-hello-world.md)** — 第一个 ChatClient, 5 行代码
-- **[02 ChatClient API](02-chatclient-api.md)** — Builder / Prompt / Advisor 三件套
-- **[03 Prompt + Advisor](03-prompt-advisor.md)** — PromptTemplate + SimpleLoggerAdvisor
-- **[04 Function Calling](04-function-calling.md)** — `@Tool` / `@ToolParam`
-- **[05 Structured Output](05-structured-output.md)** — `entity()` 强类型
-- **[06 Streaming](06-streaming.md)** — WebFlux + SSE 实时推
-
+<h3><span class="toc-phase-label toc-phase-1">PHASE 1</span> <a href="overviews/phase-1/">基础 (Spring AI 2.0 核心)</a></h3>
+<p class="toc-phase-desc">6 章上手 ChatClient 全家桶 — 同步 / 流式 / Structured / Function Calling</p>
+<ul class="toc-list">
+<li><a href="01-hello-world.html"><strong>01 Hello World</strong></a> — 第一个 ChatClient, 5 行代码</li>
+<li><a href="02-chatclient-api.html"><strong>02 ChatClient API</strong></a> — Builder / Prompt / Advisor 三件套</li>
+<li><a href="03-prompt-advisor.html"><strong>03 Prompt + Advisor</strong></a> — PromptTemplate + SimpleLoggerAdvisor</li>
+<li><a href="04-function-calling.html"><strong>04 Function Calling</strong></a> — <code>@Tool</code> / <code>@ToolParam</code></li>
+<li><a href="05-structured-output.html"><strong>05 Structured Output</strong></a> — <code>entity()</code> 强类型</li>
+<li><a href="06-streaming.html"><strong>06 Streaming</strong></a> — WebFlux + SSE 实时推</li>
+</ul>
 </div>
-
 <div class="toc-phase">
-
-<h3><span class="toc-phase-label toc-phase-2">PHASE 2</span> <a href="overviews/phase-2.md">RAG 实战 (pgvector + 高级模式)</a></h3>
-
-6 章完整 RAG pipeline — Load / Split / Embed / Store / Retrieve / Production
-
-- **[07 RAG Overview](07-rag-overview.md)** — 4 步流程 + SimpleVectorStore
-- **[08 pgvector](08-pgvector.md)** — 真实持久化 / HNSW / 维度配置
-- **[09 Document Loaders](09-document-loaders.md)** — MD / PDF / HTML + TokenTextSplitter
-- **[10 Advanced RAG](10-advanced-rag.md)** — Multi-Query + RetrievalAugmentationAdvisor
-- **[11 Re-ranking](11-reranking.md)** — DocumentPostProcessor + Cohere / BGE
-- **[12 RAG Production](12-rag-production.md)** — 增量 / Caffeine / Actuator
-
+<h3><span class="toc-phase-label toc-phase-2">PHASE 2</span> <a href="overviews/phase-2/">RAG 实战 (pgvector + 高级模式)</a></h3>
+<p class="toc-phase-desc">6 章完整 RAG pipeline — Load / Split / Embed / Store / Retrieve / Production</p>
+<ul class="toc-list">
+<li><a href="07-rag-overview.html"><strong>07 RAG Overview</strong></a> — 4 步流程 + SimpleVectorStore</li>
+<li><a href="08-pgvector.html"><strong>08 pgvector</strong></a> — 真实持久化 / HNSW / 维度配置</li>
+<li><a href="09-document-loaders.html"><strong>09 Document Loaders</strong></a> — MD / PDF / HTML + TokenTextSplitter</li>
+<li><a href="10-advanced-rag.html"><strong>10 Advanced RAG</strong></a> — Multi-Query + RetrievalAugmentationAdvisor</li>
+<li><a href="11-reranking.html"><strong>11 Re-ranking</strong></a> — DocumentPostProcessor + Cohere / BGE</li>
+<li><a href="12-rag-production.html"><strong>12 RAG Production</strong></a> — 增量 / Caffeine / Actuator</li>
+</ul>
 </div>
-
 </div>
 
 ------------------------------------------------------------------------
