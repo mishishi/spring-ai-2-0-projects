@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: 18-agent-production
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:fake-key-for-tests}
+      base-url: ${OPENAI_BASE_URL:https://api.openai.com/v1}
+      chat:
+        options:
+          model: ${OPENAI_MODEL:gpt-4o-mini}
+          timeout: 30s
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics

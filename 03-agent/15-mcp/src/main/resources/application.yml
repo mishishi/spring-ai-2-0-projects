@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: 15-mcp
+  main:
+    # 默认 Spring Boot 是 SERVLET,我们要同时跑 web (8080) + mcp server (8081)
+    # 但 webmvc starter 会让 Spring Boot 自动启动 web,这里不强制
+    web-application-type: servlet
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:fake-key-for-tests}
+      base-url: ${OPENAI_BASE_URL:https://api.openai.com/v1}
+      chat:
+        options:
+          model: ${OPENAI_MODEL:gpt-4o-mini}
+    mcp:
+      server:
+        # 启动 MCP server(Spring AI 自动暴露 @Tool 为 MCP 端点)
+        name: tools-mcp-server
+        version: 0.0.1
+        type: SYNC
+        # Streamable HTTP(Spring AI 2.0 默认 transport, 替代 SSE)
+        sse-message-endpoint: /mcp/messages
+      client:
+        # 同时作为 client 连自己(localhost:8080 走 HTTP)
+        # 注意: 真实项目里 server/client 应该是不同进程
+        stdio:
+          enabled: false
+
+server:
+  port: 8080
