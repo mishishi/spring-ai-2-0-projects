@@ -1671,3 +1671,230 @@ body.md-home .md-content__inner > p:first-of-type {
   margin-bottom: 0.3rem;
   line-height: 1;
 }
+
+/* ============================================
+   4 阶段路线图 — 杂志封面卡片
+   ============================================ */
+.phase-journey {
+  display: grid;
+  grid-template-columns: 1fr 56px 1fr 56px 1fr 56px 1fr;
+  gap: 0;
+  margin: 2.5rem 0 3rem;
+  padding: 2rem 0 0;
+  border-top: 2px solid var(--ink);
+  align-items: stretch;
+}
+
+.phase-journey__card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem 1.2rem 1.2rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--ink);
+  position: relative;
+  transition: all 0.2s ease;
+  min-height: 280px;
+}
+
+.phase-journey__card:hover {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+  border-top-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.phase-journey__card:hover .phase-journey__num,
+.phase-journey__card:hover .phase-journey__link {
+  color: var(--accent);
+}
+
+.phase-journey__card:hover .phase-journey__highlights li {
+  color: var(--paper);
+}
+
+.phase-journey__card:hover .phase-journey__tag {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+.phase-journey__card--accent {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+  border-top-color: var(--accent);
+}
+
+.phase-journey__card--accent .phase-journey__num {
+  color: var(--accent);
+}
+
+.phase-journey__card--accent .phase-journey__tag {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+.phase-journey__card--accent .phase-journey__highlights li {
+  color: var(--paper);
+}
+
+.phase-journey__card--accent .phase-journey__link {
+  color: var(--accent);
+}
+
+.phase-journey__num {
+  font-family: var(--md-heading-font);
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--ink);
+  margin-bottom: 1rem;
+  letter-spacing: -0.04em;
+  font-feature-settings: "tnum";
+}
+
+.phase-journey__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.phase-journey__card--accent .phase-journey__meta {
+  border-bottom-color: rgba(240, 235, 224, 0.2);
+}
+
+.phase-journey__tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--md-text-font);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.25rem 0.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.phase-journey__name {
+  font-family: var(--md-heading-font);
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: inherit;
+  line-height: 1.1;
+}
+
+.phase-journey__weeks {
+  font-family: var(--md-text-font);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.phase-journey__card--accent .phase-journey__weeks {
+  color: var(--accent);
+}
+
+.phase-journey__highlights {
+  list-style: none;
+  margin: 0 0 1.4rem 0;
+  padding: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.phase-journey__highlights li {
+  font-family: var(--md-text-font);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  line-height: 1.4;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.phase-journey__highlights li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 1.2rem;
+  line-height: 1;
+  top: -2px;
+}
+
+.phase-journey__link {
+  font-family: var(--md-text-font);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  border-top: 1px solid var(--line);
+  padding-top: 0.8rem;
+  display: block;
+  transition: color 0.15s ease;
+}
+
+.phase-journey__card--accent .phase-journey__link {
+  border-top-color: rgba(240, 235, 224, 0.2);
+}
+
+.phase-journey__link:hover {
+  color: var(--accent);
+}
+
+/* 卡片间的箭头 */
+.phase-journey__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--md-heading-font);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  position: relative;
+}
+
+.phase-journey__arrow span {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  background: var(--paper);
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  color: var(--accent);
+}
+
+[data-md-color-scheme="slate"] .phase-journey__arrow span {
+  background: var(--paper);
+}
+
+/* 移动端: 4 卡片改成单列 */
+@media (max-width: 960px) {
+  .phase-journey {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .phase-journey__arrow {
+    transform: rotate(90deg);
+  }
+
+  .phase-journey__card {
+    min-height: auto;
+  }
+}

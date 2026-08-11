@@ -71,18 +71,125 @@ Java 工程师的 Spring AI 2.0 重做版
 
 ## 4 阶段路线图
 
-```
-+--------------------------------------------------------------------+
-|  Spring AI 2.0 项目实战  ·  20 周                                |
-+--------------------------------------------------------------------+
-|  Phase 1 (基础)  →  Phase 2 (RAG)  →  Phase 3 (Agent)  →  Phase 4|
-|  6 章                 6 章                6 章               5 项目|
-|  Hello World →        RAG 完整      →    @Tool / MCP     →  端到端|
-|  Streaming            pgvector / …        Multi-Agent         整合 |
-+--------------------------------------------------------------------+
-|  ✅ 23 module / mvn test 全绿 / 0 网络 / 0 mockito             |
-+--------------------------------------------------------------------+
-```
+<div class="phase-journey">
+
+<div class="phase-journey__card">
+
+<span class="phase-journey__num">01</span>
+
+<div class="phase-journey__meta">
+
+<span class="phase-journey__tag">PHASE 1</span>
+
+<span class="phase-journey__name">基础</span>
+
+<span class="phase-journey__weeks">W1-4 · 6 章</span>
+
+</div>
+
+<ul class="phase-journey__highlights">
+
+<li>ChatClient API</li>
+
+<li>Streaming</li>
+
+<li>Structured Output</li>
+
+</ul>
+
+<a class="phase-journey__link" href="overviews/phase-1/">Phase 1 总览 →</a>
+
+</div>
+
+<div class="phase-journey__arrow"><span>→</span></div>
+
+<div class="phase-journey__card">
+
+<span class="phase-journey__num">02</span>
+
+<div class="phase-journey__meta">
+
+<span class="phase-journey__tag">PHASE 2</span>
+
+<span class="phase-journey__name">RAG</span>
+
+<span class="phase-journey__weeks">W5-10 · 6 章</span>
+
+</div>
+
+<ul class="phase-journey__highlights">
+
+<li>pgvector</li>
+
+<li>Multi-Query</li>
+
+<li>Re-ranking</li>
+
+</ul>
+
+<a class="phase-journey__link" href="overviews/phase-2/">Phase 2 总览 →</a>
+
+</div>
+
+<div class="phase-journey__arrow"><span>→</span></div>
+
+<div class="phase-journey__card">
+
+<span class="phase-journey__num">03</span>
+
+<div class="phase-journey__meta">
+
+<span class="phase-journey__tag">PHASE 3</span>
+
+<span class="phase-journey__name">Agent</span>
+
+<span class="phase-journey__weeks">W11-16 · 6 章</span>
+
+</div>
+
+<ul class="phase-journey__highlights">
+
+<li>@Tool · MCP</li>
+
+<li>Multi-Agent</li>
+
+<li>Graph · Memory</li>
+
+</ul>
+
+<a class="phase-journey__link" href="overviews/phase-3/">Phase 3 总览 →</a>
+
+</div>
+
+<div class="phase-journey__arrow"><span>→</span></div>
+
+<div class="phase-journey__card phase-journey__card--accent">
+
+<span class="phase-journey__num">04</span>
+
+<div class="phase-journey__meta">
+
+<span class="phase-journey__tag">PHASE 4</span>
+
+<span class="phase-journey__name">项目</span>
+
+<span class="phase-journey__weeks">W17-20 · 5 个</span>
+
+</div>
+
+<ul class="phase-journey__highlights">
+
+<li>周报 · 文档 · 旅行</li>
+
+<li>代码审查 · 综合</li>
+
+</ul>
+
+<a class="phase-journey__link" href="overviews/phase-4/">Phase 4 总览 →</a>
+
+</div>
+
+</div>
 
 ## 23 module · 全目录
 
