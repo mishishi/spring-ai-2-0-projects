@@ -1881,15 +1881,16 @@ body.md-home .md-content__inner > p:first-of-type {
 }
 
 .phase-journey__arrow span {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 36px;
   height: 36px;
-  line-height: 36px;
-  text-align: center;
   background: var(--paper);
   border: 2px solid var(--accent);
   border-radius: 50%;
   color: var(--accent);
+  font-size: 1.1rem;  /* 缩到 1.1rem(原 1.5rem),让 → 在 36px 圆圈内有 padding */
 }
 
 [data-md-color-scheme="slate"] .phase-journey__arrow span {
