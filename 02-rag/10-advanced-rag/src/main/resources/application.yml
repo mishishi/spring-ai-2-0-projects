@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: 10-advanced-rag
+  datasource:
+    url: jdbc:postgresql://localhost:5433/vectordb
+    username: postgres
+    password: postgres
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:fake-key-for-tests}
+      chat:
+        options:
+          model: gpt-4o-mini
+          temperature: 0.2
+      embedding:
+        options:
+          model: text-embedding-3-small
