@@ -24,6 +24,7 @@
         <!-- Phase 2: RAG 实战 -->
         <module>02-rag/07-rag-overview</module>
         <module>02-rag/08-pgvector</module>
+        <module>02-rag/09-document-loaders</module>
         <!-- 后续 chapter 边做边加 -->
     </modules>
 
