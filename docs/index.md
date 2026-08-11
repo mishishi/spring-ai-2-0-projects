@@ -82,31 +82,80 @@ Java 工程师的 Spring AI 2.0 重做版
 
 > **先看[第 0 章 · 导读](00-reading-guide.md)** — 读者画像 / 跟 v1 区别 / 20 周节奏
 
-<div class="toc-grid">
-<div class="toc-phase">
-<h3><span class="toc-phase-label toc-phase-1">PHASE 1</span> <a href="overviews/phase-1/">基础 (Spring AI 2.0 核心)</a></h3>
-<p class="toc-phase-desc">6 章上手 ChatClient 全家桶 — 同步 / 流式 / Structured / Function Calling</p>
-<ul class="toc-list">
-<li><a href="01-hello-world.html"><strong>01 Hello World</strong></a> — 第一个 ChatClient, 5 行代码</li>
-<li><a href="02-chatclient-api.html"><strong>02 ChatClient API</strong></a> — Builder / Prompt / Advisor 三件套</li>
-<li><a href="03-prompt-advisor.html"><strong>03 Prompt + Advisor</strong></a> — PromptTemplate + SimpleLoggerAdvisor</li>
-<li><a href="04-function-calling.html"><strong>04 Function Calling</strong></a> — <code>@Tool</code> / <code>@ToolParam</code></li>
-<li><a href="05-structured-output.html"><strong>05 Structured Output</strong></a> — <code>entity()</code> 强类型</li>
-<li><a href="06-streaming.html"><strong>06 Streaming</strong></a> — WebFlux + SSE 实时推</li>
-</ul>
+<div class="phase-toc">
+
+<section class="phase-block phase-block--1">
+
+<div class="phase-block__head">
+
+<div class="phase-block__num">01</div>
+
+<div class="phase-block__meta">
+
+<div class="phase-block__kicker"><span class="phase-block__tag">PHASE 1</span><a class="phase-block__overview" href="overviews/phase-1/">总览 →</a></div>
+
+<h3 class="phase-block__title">基础 / Spring AI 2.0 核心</h3>
+
+<p class="phase-block__desc">6 章上手 ChatClient 全家桶 — 同步 / 流式 / Structured / Function Calling</p>
+
 </div>
-<div class="toc-phase">
-<h3><span class="toc-phase-label toc-phase-2">PHASE 2</span> <a href="overviews/phase-2/">RAG 实战 (pgvector + 高级模式)</a></h3>
-<p class="toc-phase-desc">6 章完整 RAG pipeline — Load / Split / Embed / Store / Retrieve / Production</p>
-<ul class="toc-list">
-<li><a href="07-rag-overview.html"><strong>07 RAG Overview</strong></a> — 4 步流程 + SimpleVectorStore</li>
-<li><a href="08-pgvector.html"><strong>08 pgvector</strong></a> — 真实持久化 / HNSW / 维度配置</li>
-<li><a href="09-document-loaders.html"><strong>09 Document Loaders</strong></a> — MD / PDF / HTML + TokenTextSplitter</li>
-<li><a href="10-advanced-rag.html"><strong>10 Advanced RAG</strong></a> — Multi-Query + RetrievalAugmentationAdvisor</li>
-<li><a href="11-reranking.html"><strong>11 Re-ranking</strong></a> — DocumentPostProcessor + Cohere / BGE</li>
-<li><a href="12-rag-production.html"><strong>12 RAG Production</strong></a> — 增量 / Caffeine / Actuator</li>
-</ul>
+
 </div>
+
+<ol class="phase-chapters">
+
+<li class="phase-chapter"><a href="01-hello-world/"><span class="phase-chapter__num">01</span><span class="phase-chapter__body"><span class="phase-chapter__name">Hello World</span><span class="phase-chapter__desc">第一个 ChatClient,5 行代码</span></span></a></li>
+
+<li class="phase-chapter"><a href="02-chatclient-api/"><span class="phase-chapter__num">02</span><span class="phase-chapter__body"><span class="phase-chapter__name">ChatClient API</span><span class="phase-chapter__desc">Builder / Prompt / Advisor 三件套</span></span></a></li>
+
+<li class="phase-chapter"><a href="03-prompt-advisor/"><span class="phase-chapter__num">03</span><span class="phase-chapter__body"><span class="phase-chapter__name">Prompt + Advisor</span><span class="phase-chapter__desc">PromptTemplate + SimpleLoggerAdvisor</span></span></a></li>
+
+<li class="phase-chapter"><a href="04-function-calling/"><span class="phase-chapter__num">04</span><span class="phase-chapter__body"><span class="phase-chapter__name">Function Calling</span><span class="phase-chapter__desc"><code>@Tool</code> / <code>@ToolParam</code></span></span></a></li>
+
+<li class="phase-chapter"><a href="05-structured-output/"><span class="phase-chapter__num">05</span><span class="phase-chapter__body"><span class="phase-chapter__name">Structured Output</span><span class="phase-chapter__desc"><code>entity()</code> 强类型 + 自我修正</span></span></a></li>
+
+<li class="phase-chapter"><a href="06-streaming/"><span class="phase-chapter__num">06</span><span class="phase-chapter__body"><span class="phase-chapter__name">Streaming</span><span class="phase-chapter__desc">WebFlux + SSE 实时推</span></span></a></li>
+
+</ol>
+
+</section>
+
+<section class="phase-block phase-block--2">
+
+<div class="phase-block__head">
+
+<div class="phase-block__num">02</div>
+
+<div class="phase-block__meta">
+
+<div class="phase-block__kicker"><span class="phase-block__tag">PHASE 2</span><a class="phase-block__overview" href="overviews/phase-2/">总览 →</a></div>
+
+<h3 class="phase-block__title">RAG 实战 / pgvector + 高级模式</h3>
+
+<p class="phase-block__desc">6 章完整 RAG pipeline — Load / Split / Embed / Store / Retrieve / Production</p>
+
+</div>
+
+</div>
+
+<ol class="phase-chapters">
+
+<li class="phase-chapter"><a href="07-rag-overview/"><span class="phase-chapter__num">07</span><span class="phase-chapter__body"><span class="phase-chapter__name">RAG Overview</span><span class="phase-chapter__desc">4 步流程 + SimpleVectorStore</span></span></a></li>
+
+<li class="phase-chapter"><a href="08-pgvector/"><span class="phase-chapter__num">08</span><span class="phase-chapter__body"><span class="phase-chapter__name">pgvector</span><span class="phase-chapter__desc">真实持久化 / HNSW / 维度配置</span></span></a></li>
+
+<li class="phase-chapter"><a href="09-document-loaders/"><span class="phase-chapter__num">09</span><span class="phase-chapter__body"><span class="phase-chapter__name">Document Loaders</span><span class="phase-chapter__desc">MD / PDF / HTML + TokenTextSplitter</span></span></a></li>
+
+<li class="phase-chapter"><a href="10-advanced-rag/"><span class="phase-chapter__num">10</span><span class="phase-chapter__body"><span class="phase-chapter__name">Advanced RAG</span><span class="phase-chapter__desc">Multi-Query + RetrievalAugmentationAdvisor</span></span></a></li>
+
+<li class="phase-chapter"><a href="11-reranking/"><span class="phase-chapter__num">11</span><span class="phase-chapter__body"><span class="phase-chapter__name">Re-ranking</span><span class="phase-chapter__desc">DocumentPostProcessor + Cohere / BGE</span></span></a></li>
+
+<li class="phase-chapter"><a href="12-rag-production/"><span class="phase-chapter__num">12</span><span class="phase-chapter__body"><span class="phase-chapter__name">RAG Production</span><span class="phase-chapter__desc">增量 / Caffeine / Actuator</span></span></a></li>
+
+</ol>
+
+</section>
+
 </div>
 
 ------------------------------------------------------------------------
