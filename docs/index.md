@@ -6,7 +6,7 @@ Java 工程师的 Spring AI 2.0 重做版
 
 </div>
 
-## 20 周 · 12 章 + 5 个完整项目 · *0 强制外部依赖*
+## 20 周 · 18 章 + 5 个完整项目 · *0 强制外部依赖*
 
 > 写给 Java 工程师的 Spring AI 2.0 项目实战重做版 — 跟 30 天书 v1 (spring-ai-2-0-in-action) 配套。v1 是 30 天概览版,本仓库是 20 周项目实战版,每个 chapter 配独立可跑项目 + 5 个生产级综合项目。
 
@@ -14,13 +14,13 @@ Java 工程师的 Spring AI 2.0 重做版
 
 <div class="editorial-stat">
 
-<span class="editorial-stat__num">2</span><span class="editorial-stat__label">阶段</span>
+<span class="editorial-stat__num">4</span><span class="editorial-stat__label">阶段</span>
 
 </div>
 
 <div class="editorial-stat">
 
-<span class="editorial-stat__num editorial-stat__num--accent">12</span><span class="editorial-stat__label">章</span>
+<span class="editorial-stat__num editorial-stat__num--accent">18</span><span class="editorial-stat__label">章</span>
 
 </div>
 
@@ -63,22 +63,22 @@ Java 工程师的 Spring AI 2.0 重做版
 
 ------------------------------------------------------------------------
 
-## 2 阶段路线图
+## 4 阶段路线图
 
 ```
 +--------------------------------------------------------------------+
 |  Spring AI 2.0 项目实战  ·  20 周                                |
 +--------------------------------------------------------------------+
-|  Phase 1 (基础)  →  Phase 2 (RAG 实战)                           |
-|  6 章 + 1 项目       6 章 + 4 项目                                |
-|  Hello World →       RAG 完整 pipeline                           |
-|  Streaming           pgvector / Multi-Query / Re-ranking         |
+|  Phase 1 (基础)  →  Phase 2 (RAG)  →  Phase 3 (Agent)  →  Phase 4|
+|  6 章                 6 章                6 章               5 项目|
+|  Hello World →        RAG 完整      →    @Tool / MCP     →  端到端|
+|  Streaming            pgvector / …        Multi-Agent         整合 |
 +--------------------------------------------------------------------+
-|  ✅ 12 chapter / 12 module / mvn test 43.5s / 0 网络 0 Docker  |
+|  ✅ 23 module / mvn test 全绿 / 0 网络 / 0 mockito             |
 +--------------------------------------------------------------------+
 ```
 
-## 12 章 · 全目录
+## 23 module · 全目录
 
 > **先看[第 0 章 · 导读](00-reading-guide.md)** — 读者画像 / 跟 v1 区别 / 20 周节奏
 
@@ -156,19 +156,89 @@ Java 工程师的 Spring AI 2.0 重做版
 
 </section>
 
+<section class="phase-block phase-block--3">
+
+<div class="phase-block__head">
+
+<div class="phase-block__num">03</div>
+
+<div class="phase-block__meta">
+
+<div class="phase-block__kicker"><span class="phase-block__tag">PHASE 3</span><a class="phase-block__overview" href="overviews/phase-3/">总览 →</a></div>
+
+<h3 class="phase-block__title">Agent 实战 / @Tool + MCP + Multi-Agent</h3>
+
+<p class="phase-block__desc">6 章掌握 AI Agent — 纯 Spring AI 2.0 官方,无 LangChain4j 桥接</p>
+
+</div>
+
+</div>
+
+<ol class="phase-chapters">
+
+<li class="phase-chapter"><a href="13-agent-basics/"><span class="phase-chapter__num">13</span><span class="phase-chapter__body"><span class="phase-chapter__name">Agent Basics</span><span class="phase-chapter__desc">ChatClient + @Tool + Agent loop</span></span></a></li>
+
+<li class="phase-chapter"><a href="14-tool-calling/"><span class="phase-chapter__num">14</span><span class="phase-chapter__body"><span class="phase-chapter__name">Tool Calling 进阶</span><span class="phase-chapter__desc">@Tool 5 特性 + FunctionToolCallback</span></span></a></li>
+
+<li class="phase-chapter"><a href="15-mcp/"><span class="phase-chapter__num">15</span><span class="phase-chapter__body"><span class="phase-chapter__name">MCP</span><span class="phase-chapter__desc">Anthropic Model Context Protocol</span></span></a></li>
+
+<li class="phase-chapter"><a href="16-multi-agent/"><span class="phase-chapter__num">16</span><span class="phase-chapter__body"><span class="phase-chapter__name">Multi-Agent</span><span class="phase-chapter__desc">Orchestrator-Workers 模式</span></span></a></li>
+
+<li class="phase-chapter"><a href="17-spring-ai-graph/"><span class="phase-chapter__num">17</span><span class="phase-chapter__body"><span class="phase-chapter__name">Spring AI Graph</span><span class="phase-chapter__desc">状态机 + 条件边</span></span></a></li>
+
+<li class="phase-chapter"><a href="18-agent-production/"><span class="phase-chapter__num">18</span><span class="phase-chapter__body"><span class="phase-chapter__name">Agent Production</span><span class="phase-chapter__desc">ChatMemory / 流式 / 安全 / 监控</span></span></a></li>
+
+</ol>
+
+</section>
+
+<section class="phase-block phase-block--4">
+
+<div class="phase-block__head">
+
+<div class="phase-block__num">04</div>
+
+<div class="phase-block__meta">
+
+<div class="phase-block__kicker"><span class="phase-block__tag">PHASE 4</span><a class="phase-block__overview" href="overviews/phase-4/">总览 →</a></div>
+
+<h3 class="phase-block__title">完整项目 / 整合实战(5 个端到端)</h3>
+
+<p class="phase-block__desc">5 个独立可部署的 Spring Boot 项目,覆盖工程师最常见 5 类 AI 业务</p>
+
+</div>
+
+</div>
+
+<ol class="phase-chapters">
+
+<li class="phase-chapter"><a href="project-1-weekly-report/"><span class="phase-chapter__num">P1</span><span class="phase-chapter__body"><span class="phase-chapter__name">AI 周报生成器</span><span class="phase-chapter__desc">ChatClient + 0 网络 mock</span></span></a></li>
+
+<li class="phase-chapter"><a href="project-2-doc-qa/"><span class="phase-chapter__num">P2</span><span class="phase-chapter__body"><span class="phase-chapter__name">企业文档问答</span><span class="phase-chapter__desc">关键词检索 RAG + ChatClient</span></span></a></li>
+
+<li class="phase-chapter"><a href="project-3-travel-planner/"><span class="phase-chapter__num">P3</span><span class="phase-chapter__body"><span class="phase-chapter__name">AI 旅行规划师</span><span class="phase-chapter__desc">4 sub-agent + 1 orchestrator</span></span></a></li>
+
+<li class="phase-chapter"><a href="project-4-code-review/"><span class="phase-chapter__num">P4</span><span class="phase-chapter__body"><span class="phase-chapter__name">AI 代码审查器</span><span class="phase-chapter__desc">@Tool 静态 + ChatClient 语义</span></span></a></li>
+
+<li class="phase-chapter"><a href="project-5-knowledge-hub/"><span class="phase-chapter__num">P5</span><span class="phase-chapter__body"><span class="phase-chapter__name">AI 综合知识中心</span><span class="phase-chapter__desc">RAG + Tool + Memory 整合</span></span></a></li>
+
+</ol>
+
+</section>
+
 </div>
 
 ------------------------------------------------------------------------
 
-## 5 个实战项目(待开始)
+## 5 个实战项目 ✅ 2026-08-12 完成
 
 | # | 项目 | 重点技术 | 状态 |
 |---|---|---|---|
-| 1 | AI 周报生成器 | PromptTemplate + Structured Output | ⏳ W17 |
-| 2 | 企业文档问答助手 | DocumentReader + pgvector + Re-rank | ⏳ W18 |
-| 3 | AI 旅行规划助手 | Multi-Agent + MCP + Memory | ⏳ W19 |
-| 4 | AI Code Review 助手 | RAG + Agent + MCP | ⏳ W20 |
-| 5 | 企业知识中心 | 4 个项目整合 + Web UI | ⏳ 拓展 |
+| P1 | AI 周报生成器 | ChatClient + 0 网络 mock | ✅ |
+| P2 | 企业文档问答 | 关键词检索 RAG + ChatClient | ✅ |
+| P3 | AI 旅行规划师 | Multi-Agent 编排 | ✅ |
+| P4 | AI 代码审查器 | @Tool 静态 + ChatClient 语义 | ✅ |
+| P5 | AI 综合知识中心 | QueryRouter + RAG + Tool + Memory | ✅ |
 
 ------------------------------------------------------------------------
 
