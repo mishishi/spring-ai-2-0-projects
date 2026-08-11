@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: 12-rag-production
+  datasource:
+    url: jdbc:postgresql://localhost:5433/vectordb
+    username: postgres
+    password: postgres
+  cache:
+    type: caffeine
+    caffeine:
+      spec: maximumSize=1000,expireAfterWrite=5m
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:fake-key-for-tests}
+      chat:
+        options:
+          model: gpt-4o-mini
+          temperature: 0.2
+      embedding:
+        options:
+          model: text-embedding-3-small
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus

@@ -27,6 +27,7 @@
         <module>02-rag/09-document-loaders</module>
         <module>02-rag/10-advanced-rag</module>
         <module>02-rag/11-reranking</module>
+        <module>02-rag/12-rag-production</module>
         <!-- 后续 chapter 边做边加 -->
     </modules>
 
