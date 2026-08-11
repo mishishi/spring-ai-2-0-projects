@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: 13-agent-basics
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:fake-key-for-tests}
+      base-url: ${OPENAI_BASE_URL:https://api.openai.com/v1}
+      chat:
+        options:
+          model: ${OPENAI_MODEL:gpt-4o-mini}
+
+# 本地测试用 fake key,真实跑应用时用 export OPENAI_API_KEY=sk-xxxxx
