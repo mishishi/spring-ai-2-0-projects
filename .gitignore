@@ -68,3 +68,4 @@ backup-*
 # ===== Generated docs =====
 site/
 docs/_build/
+.vercel
