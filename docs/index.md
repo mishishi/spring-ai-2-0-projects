@@ -84,6 +84,8 @@ Java 工程师的 Spring AI 2.0 重做版
 
 <div class="toc-grid">
 
+<div class="toc-phase">
+
 ### <span class="toc-phase-label toc-phase-1">PHASE 1</span> [基础 (Spring AI 2.0 核心)](overviews/phase-1.md)
 
 6 章上手 ChatClient 全家桶 — 同步 / 流式 / Structured / Function Calling
@@ -95,6 +97,10 @@ Java 工程师的 Spring AI 2.0 重做版
 - **[05 Structured Output](05-structured-output.md)** — `entity()` 强类型
 - **[06 Streaming](06-streaming.md)** — WebFlux + SSE 实时推
 
+</div>
+
+<div class="toc-phase">
+
 ### <span class="toc-phase-label toc-phase-2">PHASE 2</span> [RAG 实战 (pgvector + 高级模式)](overviews/phase-2.md)
 
 6 章完整 RAG pipeline — Load / Split / Embed / Store / Retrieve / Production
@@ -105,6 +111,8 @@ Java 工程师的 Spring AI 2.0 重做版
 - **[10 Advanced RAG](10-advanced-rag.md)** — Multi-Query + RetrievalAugmentationAdvisor
 - **[11 Re-ranking](11-reranking.md)** — DocumentPostProcessor + Cohere / BGE
 - **[12 RAG Production](12-rag-production.md)** — 增量 / Caffeine / Actuator
+
+</div>
 
 </div>
 
