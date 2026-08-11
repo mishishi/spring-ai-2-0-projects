@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: 01-hello-world
+  ai:
+    openai:
+      # 默认值是 fake-key-for-tests,只是为了 application.yml 解析不报错。
+      # 实际跑时必须 export OPENAI_API_KEY=sk-xxxxx,否则会 401。
+      api-key: ${OPENAI_API_KEY:fake-key-for-tests}
+      chat:
+        options:
+          model: gpt-4o-mini
+          temperature: 0.7
