@@ -1,5 +1,17 @@
 # Spring AI 2.0 项目实战
 
+<div class="hero-kicker">
+
+SPRING AI 2.0  ·  20 WEEKS  ·  JAVA 工程师实战
+
+</div>
+
+<div class="hero-search-hint">
+
+⌘ K 搜索
+
+</div>
+
 <div class="editorial-section-label">
 
 Java 工程师的 Spring AI 2.0 重做版

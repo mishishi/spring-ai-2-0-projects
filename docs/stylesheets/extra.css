@@ -547,38 +547,89 @@ body.md-home .md-content__inner {
   padding: 0 1.5rem;
 }
 
+/* 顶部装饰 kicker — 杂志刊头 */
+.hero-kicker {
+  font-family: var(--md-text-font);
+  font-weight: 800;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 2.5rem 0 0.4rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.hero-kicker::before {
+  content: "";
+  display: inline-block;
+  width: 2.5rem;
+  height: 3px;
+  background: var(--accent);
+}
+
+.hero-search-hint {
+  position: fixed;
+  top: 0.7rem;
+  right: 1.5rem;
+  z-index: 100;
+  font-family: var(--md-text-font);
+  font-weight: 600;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+  padding: 0.25rem 0.6rem;
+  border-radius: 2px;
+  background: var(--paper);
+  pointer-events: none;
+}
+
 body.md-home .md-content__inner > h1:first-child {
   font-family: var(--md-heading-font);
   font-weight: 900;
-  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
-  line-height: 0.95;
-  letter-spacing: -0.04em;
+  font-size: clamp(3.2rem, 6.8vw, 5.8rem);
+  line-height: 0.93;
+  letter-spacing: -0.045em;
   color: var(--ink);
-  margin: 2rem 0 0.4rem;
+  margin: 0.6rem 0 0;
   padding: 0;
   text-align: left;
   border-bottom: none;
+  position: relative;
 }
 
 body.md-home .md-content__inner > h1:first-child::after {
   content: "";
   display: block;
-  width: 5rem;
+  width: 6rem;
   height: 6px;
   background: var(--accent);
-  margin-top: 1.2rem;
+  margin-top: 1.4rem;
   border-radius: 0;
+}
+
+body.md-home .md-content__inner > .editorial-section-label {
+  margin-top: 1.6rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  color: var(--accent-deep);
+  border-top: 2px solid var(--ink);
+  padding-top: 1.4rem;
 }
 
 body.md-home .md-content__inner > p:first-of-type {
   font-family: var(--md-heading-font);
   font-weight: 400;
   font-style: italic;
-  font-size: 1.25rem;
-  line-height: 1.4;
+  font-size: 1.35rem;
+  line-height: 1.45;
   color: var(--ink-soft);
-  margin: 1.2rem 0 0;
-  max-width: 50ch;
+  margin: 1.4rem 0 0;
+  max-width: 52ch;
 }
 
 /* Phase overview 顶部 CTA */
