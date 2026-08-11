@@ -133,28 +133,43 @@
     // 复制所有顶级链接
     const topLevel = primaryNav.querySelectorAll(':scope > .md-nav__list > .md-nav__item');
     topLevel.forEach(item => {
-      const link = item.querySelector(':scope > .md-nav__link');
+      const link = item.querySelector(':scope > a.md-nav__link, :scope > .md-nav__link');
       if (link) {
-        const a = document.createElement('a');
-        a.href = link.getAttribute('href');
-        a.textContent = (link.textContent || '').trim();
-        drawer.appendChild(a);
+        const text = (link.textContent || '').trim();
+        // 顶级链接(Phase 标题)可能没 href(label only),不显示
+        if (link.getAttribute('href') || text.includes('Phase')) {
+          // 跳过 phase 标题本身,只显示其下的 chapter
+          if (!text.includes('Phase')) {
+            const a = document.createElement('a');
+            a.href = link.getAttribute('href') || '#';
+            a.textContent = text;
+            a.style.fontWeight = '700';
+            drawer.appendChild(a);
+          } else {
+            // Phase 分组标题
+            const sub = document.createElement('span');
+            sub.className = 'nav-drawer__sub';
+            sub.textContent = text;
+            drawer.appendChild(sub);
+          }
+        }
 
-        // 二级链接
-        const subItems = item.querySelectorAll(':scope > .md-nav .md-nav__item .md-nav__link');
+        // 只加 chapter 级别链接(顶级 .md-nav__list > .md-nav__item > a.md-nav__link),不加 H2
+        const subItems = item.querySelectorAll(':scope > .md-nav > .md-nav__list > .md-nav__item > a.md-nav__link');
         subItems.forEach(subLink => {
           const a2 = document.createElement('a');
-          a2.href = subLink.getAttribute('href');
-          const text = (subLink.textContent || '').trim();
-          // 数字高亮
-          const match = text.match(/^(\d+)\s*(.*)$/);
+          a2.href = subLink.getAttribute('href') || '#';
+          const subText = (subLink.textContent || '').trim();
+          // 拆分数字和标题,如 "01 Hello World" → strong "01" + "Hello World"
+          const match = subText.match(/^(\d+)\s+(.+)$/);
           if (match) {
-            const strong = document.createElement('strong');
-            strong.textContent = match[1];
-            a2.appendChild(strong);
-            a2.appendChild(document.createTextNode(match[2]));
+            const num = document.createElement('span');
+            num.className = 'nav-drawer__num';
+            num.textContent = match[1];
+            a2.appendChild(num);
+            a2.appendChild(document.createTextNode(' ' + match[2]));
           } else {
-            a2.textContent = text;
+            a2.textContent = subText;
           }
           a2.style.paddingLeft = '1.2rem';
           a2.style.fontSize = '0.88rem';

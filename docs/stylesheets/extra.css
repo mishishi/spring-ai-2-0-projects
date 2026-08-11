@@ -747,6 +747,15 @@ body.md-home .md-content__inner > p:first-of-type {
   margin-right: 0.5em;
 }
 
+.nav-drawer__num {
+  font-family: var(--md-heading-font);
+  font-weight: 800;
+  color: var(--accent);
+  margin-right: 0.6em;
+  font-feature-settings: "tnum";
+  font-size: 0.92rem;
+}
+
 .nav-drawer-overlay {
   position: fixed;
   top: 0;

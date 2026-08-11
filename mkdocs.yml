@@ -51,20 +51,20 @@ nav:
   - 第 0 章 · 导读: 00-reading-guide.md
   - Phase 1 · 基础 (Spring AI 2.0 核心):
       - Phase 1 总览: overviews/phase-1.md
-      - "01": 01-hello-world.md
-      - "02": 02-chatclient-api.md
-      - "03": 03-prompt-advisor.md
-      - "04": 04-function-calling.md
-      - "05": 05-structured-output.md
-      - "06": 06-streaming.md
+      - "01 Hello World": 01-hello-world.md
+      - "02 ChatClient API": 02-chatclient-api.md
+      - "03 Prompt + Advisor": 03-prompt-advisor.md
+      - "04 Function Calling": 04-function-calling.md
+      - "05 Structured Output": 05-structured-output.md
+      - "06 Streaming": 06-streaming.md
   - Phase 2 · RAG 实战 (pgvector + 高级模式):
       - Phase 2 总览: overviews/phase-2.md
-      - "07": 07-rag-overview.md
-      - "08": 08-pgvector.md
-      - "09": 09-document-loaders.md
-      - "10": 10-advanced-rag.md
-      - "11": 11-reranking.md
-      - "12": 12-rag-production.md
+      - "07 RAG Overview": 07-rag-overview.md
+      - "08 pgvector": 08-pgvector.md
+      - "09 Document Loaders": 09-document-loaders.md
+      - "10 Advanced RAG": 10-advanced-rag.md
+      - "11 Re-ranking": 11-reranking.md
+      - "12 RAG Production": 12-rag-production.md
   - 决策记录: decisions/2026-08-11-重做决策.md
 
 repo_name: spring-ai-2-0-projects
