@@ -110,15 +110,17 @@ mvn -DskipTests package
 | 2026-08-11 | D-4 | 新仓库 = `mishishi/spring-ai-2-0-projects`(修正自 `ginko-friday`) |
 | 2026-08-11 | D-5 | 技术栈 = Java 17 + Spring Boot 4.1.0 + Spring AI 2.0.0 |
 
-## 5 个实战项目(草案)
+## 5 个实战项目(2026-08-12 完成)
 
 | 阶段 | 项目 | 重点技术 | 状态 |
 |---|---|---|---|
-| 1 | **AI 周报生成器** | PromptTemplate + Structured Output | ⏳ |
-| 2 | **企业文档问答助手** | DocumentReader + pgvector + Re-rank | ⏳ |
-| 3 | **AI 旅行规划助手** | Multi-Agent + MCP + Memory | ⏳ |
-| 综合 | **AI Code Review 助手** | RAG + Agent + MCP(GitLab API)| ⏳ |
-| 拓展 | **企业知识中心** | 上面 4 个项目的整合 + Web UI | ⏳ |
+| 4-P1 | **AI 周报生成器** | ChatClient + PromptTemplate + 0 网络 mock | ✅ |
+| 4-P2 | **企业文档问答助手** | 关键词检索 RAG + ChatClient 真 LLM 路径 | ✅ |
+| 4-P3 | **AI 旅行规划师** | 4 sub-agent + 1 orchestrator (Multi-Agent) | ✅ |
+| 4-P4 | **AI 代码审查器** | @Tool 静态分析 + ChatClient 语义审查 | ✅ |
+| 4-P5 | **AI 综合知识中心** | QueryRouter 路由 + RAG + Tool + Memory 整合 | ✅ |
+
+> **23 module 全部完成**:Phase 1 (6) + Phase 2 (6) + Phase 3 (6) + Phase 4 (5) = 23 个独立 Maven 模块,所有 `mvn test` 0 网络全绿。
 
 ## 阶段路线(20 周)
 

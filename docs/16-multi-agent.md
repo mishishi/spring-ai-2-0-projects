@@ -1,0 +1,52 @@
+# 第 16 章 · Multi-Agent 编排
+
+
+## 你将学到
+
+- ✅ 4 个 ChatClient Bean(Researcher / Writer / Reviewer / Orchestrator)
+- ✅ 每个 sub-agent 独立 system prompt
+- ✅ Orchestrator 调度 + 整合
+- ✅ 0 网络 mock 路径
+
+## 快速开始
+
+```bash
+cd 03-agent/16-multi-agent
+export OPENAI_API_KEY=sk-xxxxx  # 可选, 0 网络下用 fake key 跑测试
+mvn test                        # 0 网络测试
+mvn spring-boot:run             # 真实跑
+```
+
+## 一句话总结
+
+**Orchestrator-Workers 模式 — Anthropic 风格**
+
+## 关键 API
+
+```java
+// 核心 Pattern
+ChatClient agent = builder.defaultTools(toolObject).build();
+String answer = agent.prompt().user(query).call().content();
+```
+
+## 核心代码
+
+```
+03-agent/16-multi-agent/src/main/java/
+└── cc/misshi/springai/multiagent/AgentsConfig.java
+└── cc/misshi/springai/multiagent/Application.java
+└── cc/misshi/springai/multiagent/OrchestrationService.java
+└── cc/misshi/springai/multiagent/MultiAgentController.java
+```
+
+## 0 网络测试套路
+
+```java
+// 直接 new service, 传 null builder
+MyService svc = new MyService(null, ...);
+// service 内部 null-check, 走 mock 模板
+```
+
+## 学完下一步
+
+读 [Phase 3 总览](overviews/phase-3.md),把 6 章串起来;或直接看 [Phase 4 项目实战](overviews/phase-4.md)。

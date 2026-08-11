@@ -263,7 +263,7 @@ mvn spring-boot:run
 | 维度 | v1 [30 天书](https://spring-ai-2-0-in-action.vercel.app) | **v2 项目实战(本仓库)** |
 |---|---|---|
 | 定位 | 概览 / breadth | **项目实战 / depth** |
-| 部数 | 13 章(3 phase) | **12 章(2 phase)+ 5 项目** |
+| 部数 | 13 章(3 phase) | **18 章(4 phase)+ 5 项目** |
 | 实战项目 | 3 个 | **5 个完整可部署** |
 | 风格 | The Verge 杂志风 | **The Verge 杂志风(同款)** |
 | 状态 | 归档(2026-08-11) | **进行中** |
