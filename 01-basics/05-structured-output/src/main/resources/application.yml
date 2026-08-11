@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: 05-structured-output
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:fake-key-for-tests}
+      chat:
+        options:
+          model: gpt-4o-mini
+          temperature: 0.2  # 稍低温度,JSON 输出更稳定
+          max-tokens: 800

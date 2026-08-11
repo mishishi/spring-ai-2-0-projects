@@ -19,6 +19,7 @@
         <module>01-basics/02-chatclient-api</module>
         <module>01-basics/03-prompt-advisor</module>
         <module>01-basics/04-function-calling</module>
+        <module>01-basics/05-structured-output</module>
         <!-- 后续 chapter 边做边加 -->
     </modules>
 
