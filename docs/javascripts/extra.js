@@ -47,10 +47,10 @@
   const allLinks = Array.from(primaryNav.querySelectorAll('a.md-nav__link'));
   const currentIndex = allLinks.findIndex(a => {
     const href = a.getAttribute('href');
-    if (numStr.startsWith('P')) {
-      return href && href.includes('/' + numStr + '-');
-    }
-    return href && href.includes('/' + numStr + '-');
+    if (!href) return false;
+    // Vercel 部署后 href 是相对路径(如 `../16-multi-agent/`),不是 `/16-multi-agent/`
+    // 用 numStr 直接匹配,不管前缀
+    return href.includes(numStr + '-') || href.endsWith(numStr);
   });
   if (currentIndex === -1) return;
 
