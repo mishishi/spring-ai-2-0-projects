@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: 08-pgvector
+  datasource:
+    # 注意:macOS 本地有 PostgreSQL 在 5432,所以 Docker 用 5433 避开冲突
+    url: jdbc:postgresql://localhost:5433/vectordb
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:fake-key-for-tests}
+      chat:
+        options:
+          model: gpt-4o-mini
+          temperature: 0.2
+          max-tokens: 500
+      embedding:
+        options:
+          model: text-embedding-3-small
