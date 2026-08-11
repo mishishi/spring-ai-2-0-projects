@@ -10,41 +10,47 @@ Java 工程师的 Spring AI 2.0 重做版
 
 > 写给 Java 工程师的 Spring AI 2.0 项目实战重做版 — 跟 30 天书 v1 (spring-ai-2-0-in-action) 配套。v1 是 30 天概览版,本仓库是 20 周项目实战版,每个 chapter 配独立可跑项目 + 5 个生产级综合项目。
 
+<div class="hero-searchbar">
+
+<span class="hero-searchbar__hint">按 <kbd>⌘</kbd> <kbd>K</kbd> 搜索章节 / 关键词 · 或点击左上 ☰ 浏览 23 module</span>
+
+</div>
+
 <div class="editorial-stats">
 
 <div class="editorial-stat">
 
-<span class="editorial-stat__num">4</span><span class="editorial-stat__label">阶段</span>
+<span class="editorial-stat__icon">🌱</span><span class="editorial-stat__num">4</span><span class="editorial-stat__label">阶段</span>
 
 </div>
 
 <div class="editorial-stat">
 
-<span class="editorial-stat__num editorial-stat__num--accent">18</span><span class="editorial-stat__label">章</span>
+<span class="editorial-stat__icon">📖</span><span class="editorial-stat__num editorial-stat__num--accent">18</span><span class="editorial-stat__label">章</span>
 
 </div>
 
 <div class="editorial-stat">
 
-<span class="editorial-stat__num">5</span><span class="editorial-stat__label">项目</span>
+<span class="editorial-stat__icon">🚀</span><span class="editorial-stat__num">5</span><span class="editorial-stat__label">项目</span>
 
 </div>
 
 <div class="editorial-stat">
 
-<span class="editorial-stat__num editorial-stat__num--accent">20</span><span class="editorial-stat__label">周</span>
+<span class="editorial-stat__icon">📅</span><span class="editorial-stat__num editorial-stat__num--accent">20</span><span class="editorial-stat__label">周</span>
 
 </div>
 
 <div class="editorial-stat">
 
-<span class="editorial-stat__num">0</span><span class="editorial-stat__label">网络</span>
+<span class="editorial-stat__icon">✈️</span><span class="editorial-stat__num">0</span><span class="editorial-stat__label">网络</span>
 
 </div>
 
 <div class="editorial-stat">
 
-<span class="editorial-stat__num">0</span><span class="editorial-stat__label">Docker</span>
+<span class="editorial-stat__icon">🐳</span><span class="editorial-stat__num">0</span><span class="editorial-stat__label">Docker</span>
 
 </div>
 
