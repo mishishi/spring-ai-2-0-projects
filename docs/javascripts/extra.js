@@ -1,6 +1,10 @@
-// 标记首页 — mkdocs 默认 body 没特殊 class, 用 JS 加
+// 标记首页 — mkdocs-material 9.5 移除了 body.md-home class,用 JS 加
+// 同时所有页面都加(magazine 装饰 header 全站显示),不光是首页
+// 关键: Vercel 部署会 rewrite /01-hello-world/ 而非 /01-hello-world/index.html,
+// 所以 endsWith('/index.html') 在线上不匹配,改用更宽松的判断
 (function() {
-  if (window.location.pathname === '/' || window.location.pathname.endsWith('/index.html')) {
+  const p = window.location.pathname;
+  if (p === '/' || p.endsWith('/index.html') || /\/[^/]+\/?$/.test(p)) {
     document.body.classList.add('md-home');
   }
 })();
