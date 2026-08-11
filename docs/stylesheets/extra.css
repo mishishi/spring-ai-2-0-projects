@@ -551,6 +551,7 @@ body.md-home .md-content {
 
 body.md-home .md-content__inner {
   max-width: 920px;
+  padding: 0;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -1684,6 +1685,7 @@ body.md-home .md-content__inner > p:first-of-type {
   align-items: stretch;
   width: 100%;
   max-width: 100%;
+  box-sizing: border-box;
 }
 
 .phase-journey__card {
@@ -1691,7 +1693,7 @@ body.md-home .md-content__inner > p:first-of-type {
   flex-direction: column;
   flex: 1 1 0;
   min-width: 0;  /* 防止内容溢出撑开 */
-  padding: 1.6rem 1.1rem 1.2rem;
+  padding: 1.4rem 0.9rem 1rem;
   background: var(--paper);
   border: 1px solid var(--line);
   border-top: 4px solid var(--ink);
@@ -1819,11 +1821,12 @@ body.md-home .md-content__inner > p:first-of-type {
 
 .phase-journey__highlights li {
   font-family: var(--md-text-font);
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   color: var(--ink-soft);
   line-height: 1.4;
-  padding-left: 1rem;
+  padding-left: 0.9rem;
   position: relative;
+  word-break: keep-all;
 }
 
 .phase-journey__highlights li::before {
@@ -1861,7 +1864,7 @@ body.md-home .md-content__inner > p:first-of-type {
 
 /* 卡片间的箭头 — flex: 0 不缩 */
 .phase-journey__arrow {
-  flex: 0 0 56px;
+  flex: 0 0 40px;
   display: flex;
   align-items: center;
   justify-content: center;
