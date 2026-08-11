@@ -1676,25 +1676,29 @@ body.md-home .md-content__inner > p:first-of-type {
    4 阶段路线图 — 杂志封面卡片
    ============================================ */
 .phase-journey {
-  display: grid;
-  grid-template-columns: 1fr 56px 1fr 56px 1fr 56px 1fr;
+  display: flex;
   gap: 0;
   margin: 2.5rem 0 3rem;
   padding: 2rem 0 0;
   border-top: 2px solid var(--ink);
   align-items: stretch;
+  width: 100%;
+  max-width: 100%;
 }
 
 .phase-journey__card {
   display: flex;
   flex-direction: column;
-  padding: 1.6rem 1.2rem 1.2rem;
+  flex: 1 1 0;
+  min-width: 0;  /* 防止内容溢出撑开 */
+  padding: 1.6rem 1.1rem 1.2rem;
   background: var(--paper);
   border: 1px solid var(--line);
   border-top: 4px solid var(--ink);
   position: relative;
   transition: all 0.2s ease;
   min-height: 280px;
+  overflow: hidden;
 }
 
 .phase-journey__card:hover {
@@ -1855,8 +1859,9 @@ body.md-home .md-content__inner > p:first-of-type {
   color: var(--accent);
 }
 
-/* 卡片间的箭头 */
+/* 卡片间的箭头 — flex: 0 不缩 */
 .phase-journey__arrow {
+  flex: 0 0 56px;
   display: flex;
   align-items: center;
   justify-content: center;
