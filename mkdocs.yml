@@ -82,6 +82,8 @@ nav:
       - "P5 AI 综合知识中心": project-5-knowledge-hub.md
   - 决策记录: decisions/2026-08-11-重做决策.md
   - 复盘日志: retrospectives/2026-08-12-v1-to-v2-重做复盘.md
+  - 实践指南:
+      - 真实 LLM 接入: guides/00-真实LLM接入.md
 
 repo_name: spring-ai-2-0-projects
 repo_url: https://github.com/mishishi/spring-ai-2-0-projects
