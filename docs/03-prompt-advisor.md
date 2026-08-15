@@ -296,7 +296,7 @@ public class SafeGuardAdvisor implements CallAdvisor {
 
 ## Advisor 顺序控制
 
-`getOrder()` 决定执行顺序:
+`getOrder()` 决定执行顺序:**order 值小 → 先执行**(升序)。
 
 ```java
 public int getOrder() {
@@ -304,22 +304,64 @@ public int getOrder() {
 }
 ```
 
-**Spring 内置顺序**:
+### ⚠️ Spring 命名反直觉(必读)
 
-| Advisor | Order | 说明 |
+| 常量名 | 实际值 | 直觉 vs 实际 |
 |---|---|---|
-| `SafeGuardAdvisor` | `HIGHEST_PRECEDENCE` | 最早拦截 |
-| `MessageChatMemoryAdvisor` | `LOWEST_PRECEDENCE - 100` | 几乎最后 |
-| `QuestionAnswerAdvisor` | 0 | 中间(跟 LLM 一起) |
-| `SimpleLoggerAdvisor` | 0 | 中间 |
+| `Ordered.HIGHEST_PRECEDENCE` | `Integer.MIN_VALUE` ≈ -21 亿 | 名字叫"最高",**数值最小** |
+| `Ordered.LOWEST_PRECEDENCE` | `Integer.MAX_VALUE` ≈ +21 亿 | 名字叫"最低",**数值最大** |
 
-**自定义顺序**:
+**为什么?** Spring 的"HIGHEST precedence" = "最高优先级" = "最重要" = "应该**最先**执行"。最高优先级配最小数值,因为 `OrderComparator` 是**升序排序**。
+
+**记忆口诀**:
+
+> **"优先级高 = 数值小 = 先执行"**
+>
+> HIGHEST = MIN_VALUE(虽然名字"高",数值"小")
+>
+> LOWEST = MAX_VALUE(虽然名字"低",数值"大")
+
+### Spring 内置顺序(用具体数字替代抽象常量)
+
+| Advisor | order 值 | 数值 | 说明 |
+|---|---|---|---|
+| `SafeGuardAdvisor` | `HIGHEST_PRECEDENCE` | -2,147,483,648 | **最早**拦截 |
+| `TimingAdvisor` | `HIGHEST_PRECEDENCE + 100` | -2,147,483,548 | 早(比 SafeGuard 晚 100) |
+| `QuestionAnswerAdvisor` | `0` | 0 | 中间 |
+| `SimpleLoggerAdvisor` | `0` | 0 | 中间 |
+| `MessageChatMemoryAdvisor` | `LOWEST_PRECEDENCE - 100` | 2,147,483,547 | 几乎**最后** |
+
+**自定义顺序**(实际值)：
+
 ```java
-new TimingAdvisor();              // 最早(算总耗时)
-new SafeGuardAdvisor();            // 第二(拦截)
-new QuestionAnswerAdvisor(...);   // 第三(拼 context)
-new SimpleLoggerAdvisor();         // 第四(打印)
-new MessageChatMemoryAdvisor(...); // 最晚(存 history)
+new TimingAdvisor();                  // -21 亿 + 100(最早一批,算总耗时)
+new SafeGuardAdvisor();                // -21 亿(比 Timing 早 100)
+new QuestionAnswerAdvisor(...);       // 0(中间,拼 context)
+new SimpleLoggerAdvisor();             // 0(中间,打印)
+new MessageChatMemoryAdvisor(...);    // +21 亿 - 100(最晚,存 history)
+```
+
+### 实战推荐(简化)
+
+不记 -21 亿这种数字,**写相对偏移**:
+
+```java
+public class MyAdvisor implements CallAdvisor {
+    @Override
+    public int getOrder() {
+        return 0;          // 0 = 中间,跟 LLM 一起
+    }
+}
+```
+
+或者用相对值:
+
+```java
+Ordered.HIGHEST_PRECEDENCE + 1     // 比最最早还晚 1
+Ordered.HIGHEST_PRECEDENCE + 100   // 早
+0                                   // 中间
+Ordered.LOWEST_PRECEDENCE - 100   // 晚
+Ordered.LOWEST_PRECEDENCE - 1     // 比最最晚还早 1
 ```
 
 ## 测试(纯本地 0 网络)
