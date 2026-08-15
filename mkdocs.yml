@@ -70,10 +70,10 @@ nav:
       - "13 Agent Basics": 13-agent-basics.md
       - "14 Tool Calling": 14-tool-calling.md
       - "15 Chat Memory (多轮对话)": 15-chat-memory.md
-      - "16 MCP (Model Context Protocol)": 15-mcp.md
-      - "17 Multi-Agent": 16-multi-agent.md
-      - "18 Spring AI Graph": 17-spring-ai-graph.md
-      - "19 Agent Production": 18-agent-production.md
+      - "16 MCP (Model Context Protocol)": 16-mcp.md
+      - "17 Multi-Agent": 17-multi-agent.md
+      - "18 Spring AI Graph": 18-spring-ai-graph.md
+      - "19 Agent Production": 19-agent-production.md
   - Phase 4 · 完整项目 (整合实战):
       - Phase 4 总览: overviews/phase-4.md
       - "P1 AI 周报生成器": project-1-weekly-report.md

@@ -215,4 +215,4 @@ Streamable HTTP 用 `url`,stdio 用 `command`。
 
 ## 学完下一步
 
-[16 Multi-Agent →](16-multi-agent.md) — Orchestrator-Workers 模式,4 个 sub-agent 协作。
+[16 Multi-Agent →](17-multi-agent.md) — Orchestrator-Workers 模式,4 个 sub-agent 协作。

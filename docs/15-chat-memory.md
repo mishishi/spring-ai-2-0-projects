@@ -357,7 +357,7 @@ class ApplicationTests {
 
 ## 下一步
 
-- [第 16 章 · MCP (Model Context Protocol) →](16-mcp.md) ← 当前是 ch15, 编号稍后调整
+- [第 16 章 · MCP (Model Context Protocol) →](16-mcp.md)
 - [第 13 章 · Agent Basics →](13-agent-basics.md)— 复习 Agent loop
 - [Phase 3 总览 →](overviews/phase-3.md)
 - 切到真 LLM?看 [真实 LLM 接入指南](guides/00-真实LLM接入.md)

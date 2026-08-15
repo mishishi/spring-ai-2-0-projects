@@ -333,5 +333,5 @@ class KeywordRerankProcessorTest {
 ## 下一步
 
 - [第 12 章 · RAG Production →](12-rag-production.md)— 增量更新 / 缓存 / 监控,生产级 RAG
-- [第 18 章 · Agent Production →](18-agent-production.md)— Agent 场景的 RAG 实战
+- [第 18 章 · Agent Production →](19-agent-production.md)— Agent 场景的 RAG 实战
 - 切到真 LLM?看 [真实 LLM 接入指南](guides/00-真实LLM接入.md)

@@ -232,4 +232,4 @@ defaultSystem("你是 Researcher,只输出事实清单")
 
 ## 学完下一步
 
-[17 Spring AI Graph →](17-spring-ai-graph.md) — 用状态机 + 条件边表达更复杂的 Agent 流程(多分支 / 循环 / 跳过)。
+[17 Spring AI Graph →](18-spring-ai-graph.md) — 用状态机 + 条件边表达更复杂的 Agent 流程(多分支 / 循环 / 跳过)。

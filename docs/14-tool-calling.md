@@ -206,4 +206,4 @@ public record OrderItem(String sku, int quantity, double price) {}
 
 ## 学完下一步
 
-[15 MCP →](15-mcp.md) — Anthropic Model Context Protocol,把工具暴露给**任何** MCP 客户端(Claude Desktop / 其他 AI 应用)。
+[15 MCP →](16-mcp.md) — Anthropic Model Context Protocol,把工具暴露给**任何** MCP 客户端(Claude Desktop / 其他 AI 应用)。

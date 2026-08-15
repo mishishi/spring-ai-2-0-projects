@@ -32,10 +32,10 @@
         <module>03-agent/13-agent-basics</module>
         <module>03-agent/14-tool-calling</module>
         <module>03-agent/15-chat-memory</module>
-        <module>03-agent/15-mcp</module>
-        <module>03-agent/16-multi-agent</module>
-        <module>03-agent/17-spring-ai-graph</module>
-        <module>03-agent/18-agent-production</module>
+        <module>03-agent/16-mcp</module>
+        <module>03-agent/17-multi-agent</module>
+        <module>03-agent/18-spring-ai-graph</module>
+        <module>03-agent/19-agent-production</module>
         <!-- Phase 4: 实战项目 -->
         <module>04-projects/project-1-weekly-report</module>
         <module>04-projects/project-2-doc-qa</module>

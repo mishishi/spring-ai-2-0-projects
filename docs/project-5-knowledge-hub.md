@@ -342,4 +342,4 @@ q.addLast(...);
 
 ## 学完下一步
 
-想看更深的?回 [Phase 3 进阶 →](18-agent-production.md) 看生产化细节,或 [Phase 2 完整 RAG →](12-rag-production.md) 看 pgvector 真持久化。
+想看更深的?回 [Phase 3 进阶 →](19-agent-production.md) 看生产化细节,或 [Phase 2 完整 RAG →](12-rag-production.md) 看 pgvector 真持久化。
